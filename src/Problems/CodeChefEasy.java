@@ -47,7 +47,26 @@ public class CodeChefEasy {
 		//triangleWithAngle();
 		
 		//https://www.codechef.com/CCSTART2/problems/SQALPAT
-		alternativeSquarePattern();
+		//alternativeSquarePattern();
+		System.out.println(" >>"+returnFirstNonRepeat(" ")+"<<");
+		//Same lih n 
+		
+	}
+	private static String returnFirstNonRepeat(String str) {
+		str=str.replaceAll(" ", ""); 
+		char[] strAry=str.toCharArray();
+		String nonRepeat="";
+		for(char c:strAry)
+		{
+			if(c==' ')
+				continue;
+			if(str.indexOf(c)==str.lastIndexOf(c))
+			{
+				nonRepeat=String.valueOf(c);
+				break;
+			}	
+		}
+		return nonRepeat;
 		
 	}
 	private static void alternativeSquarePattern() {
