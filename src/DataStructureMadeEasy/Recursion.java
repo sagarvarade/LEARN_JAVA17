@@ -1,19 +1,38 @@
 package DataStructureMadeEasy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class Recursion {
 	private static String [] ary = {"a","s","a","r","g"};
 	public static void main(String[] args) {
-		System.out.println("Sum By recursion  : " +sumByRecursion(13));
+		/*System.out.println("Sum By recursion  : " +sumByRecursion(13));
 		System.out.println("Factorial by Recursion : "+factorialRecursion(5));
 		System.out.println("Tower Of hanoi : ");
 		towerOfHanoiRecursion(3,"A","B","x");
 		int [] x=new int[] {22,35,12,52,56,75,12,65,23,56,33,21};
 		System.out.println(isArrayInSortedOrder(x,x.length));
+		*/
 		//generateAllPossibleStrings(ary.length);
 		//k_string(ary.length,2);
-		System.out.println("END");
+		//System.out.println("END");
+		
+		List<String> str=new ArrayList<>();
+		str.add("11");
+		str.add("21");
+		str.add("31");
+		str.add("41");str.add("51");str.add("61");
+		Iterator<String> itr=str.iterator();
+		
+		while(itr.hasNext())
+		{
+			System.out.println(" "+itr.next());
+			str.add("56");
+			itr.remove();
+		}
+		System.out.println(" >> "+str.toString());
 	}
 	private static void k_string(int length, int i) {
 		if(length<1)
