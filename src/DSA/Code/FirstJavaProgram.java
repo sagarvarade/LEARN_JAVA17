@@ -7,7 +7,13 @@ public class FirstJavaProgram {
 	public static void main(String[] args) {
 		//CheckEvenOrOdd();
 		//greetUser();
-		SimpleInterest();
+		//SimpleInterest();
+		$("Home");
+	}
+
+	private static void $(String string) {
+		System.out.println(string);
+		
 	}
 
 	private static void SimpleInterest() {
