@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 record Student (int marks) {}
 
-public class ThirdFunctions {
+public class FourthFunctions {
 	public static void main(String[] args) {
 		// showMaxNumberFromUserInput();
 		// evenOrOdd();
