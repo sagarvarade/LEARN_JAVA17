@@ -26,7 +26,7 @@ public class FourthFunctions {
 		//checkIsPalindromeOrNot(342);
 		//checkIsPalindromeOrNot(343);
 		//returnSumOfFirstNNumber(5);
-		 returnPrimeNumbersFromRange(1000,25000);
+		// returnPrimeNumbersFromRange(1000,25000);
 	}
 
 	private static void returnPrimeNumbersFromRange(int start,int end) {
