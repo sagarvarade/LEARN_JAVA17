@@ -17,7 +17,33 @@ public class DSAOne {
 			  isPrimeNumber(i);
 		  }*/
 		
-		System.out.println(gcd(60,24));
+		//System.out.println(gcd(60,24));
+		System.out.println(fastPower(1121312,3));
+		System.out.println(fastPower2(1121312,3,100000));
+	}
+
+	private static int fastPower2(int a, int b,int n) {
+		int res=1;
+		while(b>0) {
+			if((b&1)!=0) {
+				res=(res*a%n)%n;
+			}
+			a=(a%n *a%n)%n;
+			b=b>>1;
+		}
+		return res;
+	}
+	
+	private static int fastPower(int a, int b) {
+		int res=1;
+		while(b>0) {
+			if((b&1)!=0) {
+				res=res*a;
+			}
+			a=a*a;
+			b=b>>1;
+		}
+		return res;
 	}
 
 	private static int gcd(int a, int b) {
