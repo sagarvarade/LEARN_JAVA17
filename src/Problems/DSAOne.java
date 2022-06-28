@@ -21,9 +21,9 @@ public class DSAOne {
 	}
 
 	private static int gcd(int a, int b) {
-		if(b==0) return a;
-		return gcd(b,a%b);
-		
+		//if(b==0) return a;
+		//return gcd(b,a%b);
+		return (b==0)?a: gcd(b,a%b);
 	}
 
 	private static void isPrimeNumber(int num) {
