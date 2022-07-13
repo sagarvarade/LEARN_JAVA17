@@ -53,8 +53,30 @@ public class CodeChefEasy {
 
 		// checkHowManyBurgersCanMake();
 		// checkHowManyDaysTowait();
-		dnaStorage();
+		//dnaStorage();
+		
+		replaceElementsFromArray(new int [] {5,2,6,1,4,7,3,6});
 
+	}
+
+	private static void replaceElementsFromArray(int[] ary) {
+		int len=ary.length;
+		int curLastMax=ary[len-1];
+		ary[len-1]=-1;
+		for(int i=len-2;i>=0;i--) {
+			int temp=ary[i];
+			if(curLastMax>temp) {
+				ary[i]=curLastMax;
+			}
+			else
+			{
+				ary[i]=-1;
+			}
+			if(curLastMax<temp) {
+				curLastMax=temp;
+			}
+		}
+		System.out.println(Arrays.toString(ary));
 	}
 
 	private static void dnaStorage() {
