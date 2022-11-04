@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import javax.accessibility.AccessibleAttributeSequence;
 
 public class CodeChefEasy {
 
@@ -55,8 +56,177 @@ public class CodeChefEasy {
 		// checkHowManyDaysTowait();
 		//dnaStorage();
 		
-		replaceElementsFromArray(new int [] {5,2,6,1,4,7,3,6});
+		//replaceElementsFromArray(new int [] {5,2,6,1,4,7,3,6});
+		//https://www.codechef.com/submit/THREETOPICS
+		//chefThreeTopic();
+		
+		//https://www.codechef.com/submit/DISCUS
+		//discussThreeThrow();
+		
+		//https://www.codechef.com/OCT221D/problems/PODIUM
+		//podiumFinish();
+		//https://www.codechef.com/OCT221D/problems/MINPIZZA
+		//MINPIZZA();
+		//https://www.codechef.com/OCT221D/problems/BUILDINGRACE
+		//BuildingRace();
+		
+		//https://www.codechef.com/submit/WINNERR
+		//WINNER();
+		//https://www.codechef.com/submit/MAXTASTE
+		// MAXTastinessOfDish();
+		//https://www.codechef.com/submit/MOVIE2X
+		MOVIEAT2X();
+	}
 
+	private static void MOVIEAT2X() {
+		Scanner sc = new Scanner(System.in);
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		int TwoXSpeed=y/2;
+		int TotalMovie=x-TwoXSpeed;
+		System.out.println(TotalMovie);
+		
+	}
+
+	private static void MAXTastinessOfDish() {
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] aryTest=new int[testCases][4];
+		for(int i=0;i<testCases;i++) {
+			aryTest[i][0]=sc.nextInt();
+			aryTest[i][1]=sc.nextInt();
+			aryTest[i][2]=sc.nextInt();
+			aryTest[i][3]=sc.nextInt();
+		}
+		for(int i=0;i<testCases;i++) {
+			int ATest=aryTest[i][0]>aryTest[i][1]?aryTest[i][0]:aryTest[i][1];
+			int BTest=aryTest[i][2]>aryTest[i][3]?aryTest[i][2]:aryTest[i][3];
+			System.out.println(ATest+BTest);
+		}
+	}
+
+	private static void WINNER() {
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] aryTest=new int[testCases][4];
+		for(int i=0;i<testCases;i++) {
+			aryTest[i][0]=sc.nextInt();
+			aryTest[i][1]=sc.nextInt();
+			aryTest[i][2]=sc.nextInt();
+			aryTest[i][3]=sc.nextInt();
+		}
+		for(int i=0;i<testCases;i++) {
+			int APenalty=aryTest[i][0]>aryTest[i][1]?aryTest[i][0]:aryTest[i][1];
+			int BPenalty=aryTest[i][2]>aryTest[i][3]?aryTest[i][2]:aryTest[i][3];
+			if(APenalty==BPenalty) {
+				System.out.println("TIE");
+			}
+			else if(APenalty<BPenalty) {
+				System.out.println("P");
+			}
+			else if(APenalty>BPenalty) {
+				System.out.println("Q");
+			}
+		}
+	}
+
+	private static void BuildingRace() {
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] aryTest=new int[testCases][4];
+		for(int i=0;i<testCases;i++) {
+			aryTest[i][0]=sc.nextInt();
+			aryTest[i][1]=sc.nextInt();
+			aryTest[i][2]=sc.nextInt();
+			aryTest[i][3]=sc.nextInt();
+		}
+		for(int i=0;i<testCases;i++) {
+			double timeToReachGroudA=aryTest[i][0]/aryTest[i][2];
+			double timeToReachGroudB=aryTest[i][1]/aryTest[i][3];
+			if(timeToReachGroudA==timeToReachGroudB)
+				System.out.println("Both");
+			else if(timeToReachGroudA<timeToReachGroudB)
+				System.out.println("Chef");
+			else if(timeToReachGroudA>timeToReachGroudB)
+				System.out.println("Chefina");
+		}
+		
+	}
+
+	private static void MINPIZZA() {
+		final int PIZZ_SLICE=4;
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] aryTest=new int[testCases][2];
+		for(int i=0;i<testCases;i++) {
+			aryTest[i][0]=sc.nextInt();
+			aryTest[i][1]=sc.nextInt();
+		}
+		for(int i=0;i<aryTest.length;i++) {
+			int sliceRequired=aryTest[i][0]*aryTest[i][1];
+			int pizzRequired=sliceRequired/PIZZ_SLICE;
+			if(sliceRequired%PIZZ_SLICE>0)
+				pizzRequired=pizzRequired+1;
+			System.out.println(pizzRequired);
+		}
+	}
+
+	private static void podiumFinish() {
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] aryTest=new int[testCases][2];
+		for(int i=0;i<testCases;i++) {
+			aryTest[i][0]=sc.nextInt();
+			aryTest[i][1]=sc.nextInt();
+		}
+		for(int i=0;i<aryTest.length;i++) {
+			System.out.println(aryTest[i][0]+aryTest[i][1]);
+		}
+	}
+
+	private static void discussThreeThrow() {
+		Scanner sc = new Scanner(System.in);
+		int testCases=sc.nextInt();
+		int [][] ThrowsGive=new int[testCases][3];
+		for(int i=0;i<testCases;i++) {
+			ThrowsGive[i][0]=sc.nextInt();
+			ThrowsGive[i][1]=sc.nextInt();
+			ThrowsGive[i][2]=sc.nextInt();
+		}
+		for(int i=0;i<ThrowsGive.length;i++) {
+			int MaxThrow=0;
+			if(ThrowsGive[i][0]>=ThrowsGive[i][1] && ThrowsGive[i][0]>=ThrowsGive[i][2])
+			{
+				MaxThrow=ThrowsGive[i][0];
+			}
+			else if(ThrowsGive[i][1]>=ThrowsGive[i][0] && ThrowsGive[i][1]>=ThrowsGive[i][2])
+			{
+				MaxThrow=ThrowsGive[i][1];
+			}
+			else if(ThrowsGive[i][2]>=ThrowsGive[i][0] && ThrowsGive[i][2]>=ThrowsGive[i][1])
+			{
+				MaxThrow=ThrowsGive[i][2];
+			}
+			System.out.println(MaxThrow);
+		}
+	}
+
+	private static void chefThreeTopic() {
+		Scanner sc = new Scanner(System.in);
+		String line=sc.nextLine();
+		String [] x=line.split(" ");
+		String getIn=x[x.length-1];
+		boolean Found=false;
+		for(int i=0;i<x.length-1;i++) {
+			if(x[i].equals(getIn))
+			{
+				Found=true;
+			}
+		}
+		if(Found)
+			System.out.println("Yes");
+		else
+			System.out.println("No");
 	}
 
 	private static void replaceElementsFromArray(int[] ary) {
