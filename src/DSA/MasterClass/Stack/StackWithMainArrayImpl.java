@@ -1,6 +1,6 @@
 package DSA.MasterClass.Stack;
 
-public class StackWithMain {
+public class StackWithMainArrayImpl {
 	public static void main(String[] args) {
 		Stack stck = new Stack(4);
 		System.out.println(stck.isEmpty());
@@ -21,7 +21,7 @@ public class StackWithMain {
 	}
 }
 
-class Stack {
+class Stack { 
 	int[] arr;
 	int topOfStack;
 
