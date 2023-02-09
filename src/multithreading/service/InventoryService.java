@@ -14,7 +14,12 @@ public class InventoryService {
                 .count(2).build();
 
     }
+    public Inventory retrieveInventory(ProductOption productOption) {
+        delay(500);
+        return Inventory.builder()
+                .count(2).build();
 
+    }
     public CompletableFuture<Inventory> addInventory_CF(ProductOption productOption) {
 
         return CompletableFuture.supplyAsync(() -> {
