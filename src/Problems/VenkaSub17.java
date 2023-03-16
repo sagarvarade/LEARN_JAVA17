@@ -21,7 +21,6 @@ import Problems.Entities.Asset.AssetType;
 import Problems.Entities.Heavy;
 import Problems.Entities.HolderNaive;
 import Problems.Entities.Person;
-import Problems.Recursion.TailCall;
 
 record Employee(int num, String name, double salr) {
 }

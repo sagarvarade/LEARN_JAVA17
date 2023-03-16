@@ -14,7 +14,6 @@ import multithreading.domain.ProductOption;
 import multithreading.domain.Review;
 import multithreading.service.InventoryService;
 import multithreading.service.ProductInfoService;
-import multithreading.service.ProductService;
 import multithreading.service.ReviewService;
 
 public class ProductServiceUsingCompletableFuture {

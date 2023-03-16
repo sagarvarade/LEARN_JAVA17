@@ -13,8 +13,7 @@ public class ProductInfoService {
         delay(1000);
         List<ProductOption> productOptions = List.of(new ProductOption(1, "64GB", "Black", 699.99),
                 new ProductOption(2, "128GB", "Black", 749.99));
-        return ProductInfo.builder().productId(productId)
-                .productOptions(productOptions)
-                .build();
+        //return ProductInfo.builder().productId(productId).productOptions(productOptions).build();
+        return new ProductInfo().setProductId(productId).setProductOptions(productOptions);
     }
 }

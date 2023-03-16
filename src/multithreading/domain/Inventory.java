@@ -11,4 +11,24 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Inventory {
     private int count;
+
+	public Inventory() {
+		super();
+	}
+
+	public Inventory(int count) {
+		super();
+		this.count = count;
+	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public Inventory setCount(int count) {
+		this.count = count;
+		return this;
+	}
+
+    
 }

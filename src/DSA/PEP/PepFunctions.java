@@ -2,8 +2,6 @@ package DSA.PEP;
 
 import java.util.Scanner;
 
-import org.junit.Test;
-
 public class PepFunctions {
 	
 	//@Test

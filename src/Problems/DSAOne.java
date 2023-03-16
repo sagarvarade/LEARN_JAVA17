@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class DSAOne {
@@ -13,44 +12,44 @@ public class DSAOne {
 	
 	
 	public static void main(String[] args) {
-		//BitManipulation();
-		//XORDemo();
-		//findNonDuplicateNumber();
-		//System.out.println(factorialNumer(30));
-		//trailingZerosInFactorial(30);
-		//palindromeNumber(121);
-		//palindromeString("aabbaac");
+		BitManipulation();
+		XORDemo();
+		findNonDuplicateNumber();
+		System.out.println(factorialNumer(30));
+		trailingZerosInFactorial(30);
+		palindromeNumber(121);
+		palindromeString("aabbaac");
 		/*  for(int i=2;i<100;i++) {
 			  isPrimeNumber(i);
 		  }*/
 		
-		//System.out.println(gcd(60,24));
-		//System.out.println(fastPower(1121312,3));
-		//System.out.println(fastPower2(1121312,3,100000));
+		System.out.println(gcd(60,24));
+		System.out.println(fastPower(1121312,3));
+		System.out.println(fastPower2(1121312,3,100000));
 		
 		//RecursionProblems
-		//System.out.println(sumOfN(5));
-		//System.out.println(power(2,4)+"  "+power(5,3));
+		System.out.println(sumOfN(5));
+		System.out.println(power(2,4)+"  "+power(5,3));
 		
-		//System.out.println(possibleNumberOfWays(4,3));
-		//System.out.println(josephusProblem(5,3));
+		System.out.println(possibleNumberOfWays(4,3));
+		System.out.println(josephusProblem(5,3));
 		
-		//System.out.println(isStringPalindrom("aabbaa",0,0)+"   "+isStringPalindrom("abc",0,0));
+		System.out.println(isStringPalindrom("aabbaa",0,0)+"   "+isStringPalindrom("abc",0,0));
 		
-		//majorityElementFromArray(new int[] {1,2,3,1,1,1});
-		//System.out.println(largestSumContinousArray(new int[] {5,-4,-2,6,-1}));
-		//System.out.println(maximumProfitSoFar(new int [] {5,2,6,4,1}));
-		//System.out.println(maximumProfitAnyTRXFar(new int [] {5,2,6,1,4,7,3,6}));
+		majorityElementFromArray(new int[] {1,2,3,1,1,1});
+		System.out.println(largestSumContinousArray(new int[] {5,-4,-2,6,-1}));
+		System.out.println(maximumProfitSoFar(new int [] {5,2,6,4,1}));
+		System.out.println(maximumProfitAnyTRXFar(new int [] {5,2,6,1,4,7,3,6}));
 		
-		//System.out.println(rainWaterTrapping(new int [] {5,2,6,1,4,7,3,6}));
+		System.out.println(rainWaterTrapping(new int [] {5,2,6,1,4,7,3,6}));
 		
 		
 		
 		//Sorting
-		//System.out.println(bubbleSort(new int [] {5,2,6,1,4,7,3,6}));
-		//System.out.println(insertionSort(new int [] {5,2,6,1,4,7,3,6}));
+		System.out.println(bubbleSort(new int [] {5,2,6,1,4,7,3,6}));
+		System.out.println(insertionSort(new int [] {5,2,6,1,4,7,3,6}));
 		
-		//System.out.println(selectionSort(new int [] {5,2,6,1,4,7,3,6}));
+		System.out.println(selectionSort(new int [] {5,2,6,1,4,7,3,6}));
 		System.out.println(quickSort(new int [] {5,2,6,1,4,7,3,6},0,0));
 	}
 

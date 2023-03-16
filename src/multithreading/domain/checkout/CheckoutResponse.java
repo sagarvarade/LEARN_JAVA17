@@ -26,4 +26,29 @@ public class CheckoutResponse {
         this.checkoutStatus = checkoutStatus;
         this.finalRate = finalRate;
     }
+
+	public CheckoutStatus getCheckoutStatus() {
+		return checkoutStatus;
+	}
+
+	public void setCheckoutStatus(CheckoutStatus checkoutStatus) {
+		this.checkoutStatus = checkoutStatus;
+	}
+
+	public List<CartItem> getErrorList() {
+		return errorList;
+	}
+
+	public void setErrorList(List<CartItem> errorList) {
+		this.errorList = errorList;
+	}
+
+	public double getFinalRate() {
+		return finalRate;
+	}
+
+	public void setFinalRate(double finalRate) {
+		this.finalRate = finalRate;
+	}
+    
 }

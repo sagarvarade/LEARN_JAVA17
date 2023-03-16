@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Java8Durga {
-	
+
 	int x = 777;
-	
+
 	public static void main(String[] args) {
 		func fc = new func() {
 			@Override
@@ -19,7 +19,7 @@ public class Java8Durga {
 			return "SYS2";
 		};
 		fc2.prinme();
-		System.out.println("2>  " + fc2.syt()+"  ");
+		System.out.println("2>  " + fc2.syt() + "  ");
 		// Functional Interface with Threads
 		Runnable r = new Runnable() {
 			@Override
@@ -46,35 +46,35 @@ public class Java8Durga {
 				return 1;
 			}
 		};
-		//If an interface extends Functional Interface and child interface doesn’t contain any abstract method 
-		//then child interface is also Functional Interface
-		B b1=new B() {
-			
+		// If an interface extends Functional Interface and child interface doesnï¿½t
+		// contain any abstract method
+		// then child interface is also Functional Interface
+		B b1 = new B() {
+
 			@Override
 			public void methodOne() {
 				// TODO Auto-generated method stub
-				
+
 			}
 		};
-		MathOpertaion sum=(a,b)->a+b;
-		MathOpertaion multi=(a,b)->a*b;
-		MathOpertaion div=sum::oper;
-		System.out.println(" Lambda "+sum.oper(10, 20)+" "+multi.oper(10, 20)+"  "+div.oper(4, 2));
+		MathOpertaion sum = (a, b) -> a + b;
+		MathOpertaion multi = (a, b) -> a * b;
+		MathOpertaion div = sum::oper;
+		System.out.println(" Lambda " + sum.oper(10, 20) + " " + multi.oper(10, 20) + "  " + div.oper(4, 2));
 		passLambdaAsArgument(sum);
-		
-		
-		
+
 	}
 
 	private static void passLambdaAsArgument(MathOpertaion sum) {
 		System.out.println(sum.oper(90, 78));
 	}
-	
+
 }
 
 @FunctionalInterface
 interface func {
 	public String syt();
+
 	default void prinme() {
 		System.out.println("Default pring tem");
 	}
@@ -88,7 +88,8 @@ interface A {
 @FunctionalInterface
 interface B extends A {
 }
+
 @FunctionalInterface
 interface MathOpertaion {
-	public int oper(int a,int b);
+	public int oper(int a, int b);
 }
